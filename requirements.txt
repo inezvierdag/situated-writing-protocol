@@ -1,0 +1,8 @@
+# Apple silicon (which I used). On Linux, Windows, or Intel Mac use requirements-portable.txt.
+mlx>=0.18
+mlx-lm>=0.19
+torch>=2.2
+transformers>=4.40
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8

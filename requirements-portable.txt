@@ -1,0 +1,8 @@
+torch>=2.2
+transformers>=4.40
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+
+# need to be honest, I did not have the possibility to test this 
+# on a machine without a GPU, so I don't know if it works.

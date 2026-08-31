@@ -1,0 +1,6 @@
+{
+  "body":    ["body", "flesh", "hand", "mouth", "skin", "stomach", "throat", "tongue"],
+  "object":  ["knife", "mirror", "plate", "room", "table"],
+  "text":    ["metaphor", "sentence", "word", "version"],
+  "neutral": ["event", "thing", "time", "way"]
+}

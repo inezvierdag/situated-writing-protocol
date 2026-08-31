@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+
+message: "If you use this protocol, please cite the thesis and this repository."
+
+title: "Situated Writing Protocol"
+
+abstract: >-
+  A practice-based protocol for bringing teacher-forced language-model
+  evaluation into relation with situated writing. It supports the composition,
+  documentation, measurement, comparison, and revision of pre-written text
+  under a declared model configuration.
+authors:
+  - family-names: Vierdag
+    given-names: Inez
+version: 1.0.0
+date-released: 2026-08-31
+license: MIT
+license-url: "https://github.com/inezvierdag/situated-writing-protocol/blob/main/LICENSE"
+
+keywords:
+  - artistic research
+  - practice-based research
+  - situated writing
+  - language models
+  - teacher-forced evaluation
+  - token-level loss
+  - situated knowledge
+
+preferred-citation:
+  type: thesis
+  authors:
+    - family-names: Vierdag
+      given-names: Inez
+  title: "The Loss of a Body: The Measurable Improbability of the Situated Sentence"
+  thesis-type: "Research master's thesis"
+  institution: "University of Amsterdam"
+  year: 2026
