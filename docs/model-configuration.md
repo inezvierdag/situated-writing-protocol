@@ -2,7 +2,6 @@
 
 A loss value belongs to the setup that produced it. Record that setup when you score, not afterwards from memory. (Would have spared me a lot of time if I worked like this at the moment of research.)
 
-Use [`templates/pre_scoring_memo_template.md`](../templates/pre_scoring_memo_template.md) for each run.
 
 ## Record for every run
 

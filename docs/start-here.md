@@ -73,4 +73,4 @@ A method that can only confirm what it hoped to find has stopped being a method.
 - [`method.md`](method.md) — the procedure and its sequence
 - [`model-configuration.md`](model-configuration.md) — what to record with every scoring run
 - [`ethical-boundaries.md`](ethical-boundaries.md) — limits on working with writing
-- `templates/` — composition notes, pre-scoring memos, variant declarations, and revision logs
+- `templates/` — the revision log

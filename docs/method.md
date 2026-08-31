@@ -7,7 +7,6 @@ The measurement enters after writing as one way of attending to the text: it can
 
 Before the loss value, record the conditions in which the passage was written: the constraint, formal problem, material situation, and choices I am keeping open or refusing to resolve.
 
-Use [`templates/composition_note_template.md`](../templates/composition_note_template.md).
 
 This note comes first because it records the writing situation before the score begins to shape the reading.
 
@@ -22,7 +21,7 @@ A revision becomes a new file with a new ID. The sequence remains visible: what 
 
 Run teacher-forced evaluation on the frozen passage. The model receives the text as it already exists. At each position, it assigns a probability to the token that appears after the preceding tokens.
 The passage is evaluated, not generated. The writing comes first; the model enters afterwards.
-Record the model, tokenizer, quantization and context policy before scoring. Use [`templates/pre_scoring_memo_template.md`](../templates/pre_scoring_memo_template.md).
+Record the model, tokenizer, quantization and context policy before scoring.
 
 ```bash
 
@@ -40,7 +39,7 @@ Keep the token-level scores. The word-level view is built from them.
 ## 5. Compare declared changes
 
 A comparison begins with a declared change. A matched variant changes one formal relation while keeping the rest as steady as possible.
-Before running a comparison, record what changes, what remains fixed, and which word, region, or passage is being read. Use [`templates/matched_variant_template.md`](../templates/matched_variant_template.md).
+Before running a comparison, record what changes, what remains fixed, and which word, region, or passage is being read.
 Length matters. Later tokens arrive with more context, so longer passages often receive lower mean loss. Keep matched variants close in length. When groups differ in length, use `study1_protocol_visible.py`, which adjusts the group comparison for token count.
 
 

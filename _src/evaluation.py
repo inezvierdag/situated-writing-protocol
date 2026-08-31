@@ -116,7 +116,7 @@ class _TorchModel:
         self.name = str(model_path)
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
-        # float32 on CPU: float16 is slow there and can underflow to inf.
+        # float32 on CPU: float16 is very very slow there.
         dtype = torch.float32 if device == "cpu" else torch.float16
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path, dtype=dtype).to(device).eval()
@@ -176,8 +176,8 @@ def load_model(model_path, backend="auto"):
         f"Could not load {model_path!r} with any available backend.\n"
         + "\n".join(failures)
         + "\n\nCheck the model name or path. MLX checkpoints (names usually "
-          "containing\n'mlx-community') need the mlx backend; ordinary Hugging "
-          "Face checkpoints need torch.")
+          "containing\n'mlx-community') need the mlx backend; Hugging Face"
+          "checkpoints need torch.")
 
 
 def token_losses(model, text):
@@ -206,12 +206,7 @@ def token_losses(model, text):
 def to_words(text, offsets, losses):
     """Group token losses into words, summing each word's sub-tokens.
 
-    Word boundaries are detected two ways, because tokenizers differ. In
-    SentencePiece-style vocabularies (Mistral, Llama) leading whitespace lives
-    *inside* the token, so " table" is one token rather than a gap plus
-    "table"; a new word starts when a token's own text begins with whitespace.
-    In byte-level BPE vocabularies (GPT-2) the offsets can leave a literal gap
-    instead. Both are treated as a word boundary.
+    
     """
     spans = []
     current = None
@@ -222,14 +217,14 @@ def to_words(text, offsets, losses):
             continue
         token_text = text[start:end]
 
-        if not token_text.strip():          # pure whitespace closes a word
+        if not token_text.strip():         
             current = None
             previous_end = end
             continue
 
         starts_word = (
-            token_text[:1].isspace()                       # space inside token
-            or (previous_end is not None and start > previous_end)  # gap
+            token_text[:1].isspace()                    
+            or (previous_end is not None and start > previous_end) 
         )
         if starts_word:
             current = None

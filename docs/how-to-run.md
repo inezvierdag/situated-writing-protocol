@@ -56,7 +56,7 @@ Use the same model, tokenizer, backend, and quantisation throughout a comparison
 
 ## Run the examples
 
-Start with the synthetic examples. They show the output format without using your own writing.
+Start with the examples. They show the output format without using your own writing.
 
 ```bash
 python3 scripts/study1_protocol_visible.py \

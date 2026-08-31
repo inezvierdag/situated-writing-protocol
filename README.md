@@ -33,7 +33,7 @@ The repository also includes a PyTorch route for other systems. It was not used 
 
 ## Running the examples
 
-Each study includes small synthetic examples that show the procedure without using your own writing.
+Each study includes small examples that show the procedure without using your own writing.
 
 ```bash
 python3 scripts/study1_protocol_visible.py \
@@ -65,9 +65,10 @@ situated-writing-protocol/
 │   ├── study2_sentence_places_body.py
 │   ├── study3_sentence_breaks.py
 │   ├── study4_writing_back.py
-│   └── score_passage.py
+│   ├── score_passage.py
+│   └── make_controls.py
 ├── _src/
-│   ├── scoring.py
+│   ├── evaluation.py
 │   ├── compare.py
 │   ├── heatmap.py
 │   └── common.py
@@ -76,10 +77,9 @@ situated-writing-protocol/
 │   ├── how-to-run.md
 │   ├── method.md
 │   ├── model-configuration.md
-│   ├── ethical-boundaries.md
-│   └── glossary.md
+│   └── ethical-boundaries.md
 ├── examples/
-├── templates/
+├── templates/            revision log
 ├── tests/
 ├── outputs/
 ├── README.md
